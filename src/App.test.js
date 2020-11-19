@@ -1,8 +1,14 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { render } from "@testing-library/react";
+import App from "./App";
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+test("expects addContactButton in App component", () => {
+  const { queryByTestId } = render(<App />);
+  const addContactButton = queryByTestId("add-contact-button");
+  expect(addContactButton).toBeInTheDocument();
+});
+
+test("expects Drawer not to be in App component on render", () => {
+  const { queryByTestId } = render(<App />);
+  const addDrawer = queryByTestId("add-contact-drawer");
+  expect(addDrawer).not.toBeInTheDocument();
 });

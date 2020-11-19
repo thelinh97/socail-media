@@ -1,0 +1,24 @@
+.icon {
+  font-size: 20px;
+}
+.icon:hover {
+  -ms-transform: scale(1.5, 1.5); /* IE 9 */
+  transform: scale(1.5, 1.5);
+  transition: all 0.3s ease;
+}
+.icon-red {
+  color: red;
+}
+.icon-dark {
+  color: #666666;
+  margin-right: 10px;
+}
+.site-layout-background {
+  min-height: 360;
+  padding: 24px;
+}
+@media only screen and (max-width: 375px) {
+  .site-layout-background {
+    padding: 12px;
+  }
+}
